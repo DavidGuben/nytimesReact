@@ -1,0 +1,29 @@
+{
+  "name": "nytimesreact",
+  "version": "1.0.0",
+  "description": "Week 19 Homework: NY Times search using react",
+  "main": "app.js",
+  "dependencies": {
+    "axios": "^0.14.0",
+    "body-parser": "^1.15.2",
+    "css-loader": "^0.25.0",
+    "express": "^4.14.0",
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2",
+    "style-loader": "^0.13.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "webpack-dev-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DavidGuben/nytimesReact.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DavidGuben/nytimesReact/issues"
+  },
+  "homepage": "https://github.com/DavidGuben/nytimesReact#readme"
+}
