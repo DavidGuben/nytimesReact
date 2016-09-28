@@ -5,35 +5,32 @@ class App extends React.Component {
   constructor(){
     super();
     this.state = {txt: "Enter your search term."}
+    this.update = this.update.bind(this)
   }
   update(e){
-    this.setState({
-      txt: e.target.value
-    })
+    this.setState({txt: e.target.value})
   }
   render(){
-    let txt = this.props.txt;
     return (
     <div>
-    <div className="panel panel-default">
-  <div className="panel-body">
-    Basic panel example
-  </div>
-</div>
-    <input type="text"
-      onChange={this.update.bind(this)} />
-     <h1>Hello world</h1>
-     <p>{txt}</p>
-     <h1>{this.state.txt}</h1>
+      <Widget txt={this.state.txt} update={this.update} />
+      <Widget txt={this.state.txt} update={this.update} />
+      <Widget txt={this.state.txt} update={this.update} />
+      <Widget txt={this.state.txt} update={this.update} />
+      <Widget txt={this.state.txt} update={this.update} />
     </div>
-    )
+    );
   }
 }
-// property types expected
-// renders a default property value to the App component
-App.defaultProps = {
-  txt: 'unable to connect'
+
+const Widget = (props) => {
+  return (
+    <div>
+      <input type="text"
+        onChange={props.update} />
+        <h1>{props.txt}</h1>
+    </div>
+  );
 }
-// stateless function: cannot have state!
 
 export default App
